@@ -58,3 +58,9 @@ jobs:
         GRID: ${{ matrix.grid }}
         HS: ${{ matrix.highspeed }}
         VERSION: ${{ env.RELEASE_VERSION }}
+    - name: Archive production artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist-without-markdown
+        path: |
+          temp/build.bin
