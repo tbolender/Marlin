@@ -602,9 +602,9 @@
     #define DEFAULT_Kd_LIST {  78.81,  78.81 }
   #else
     // Ender 3 v2
-    #define DEFAULT_Kp  28.72
-    #define DEFAULT_Ki   2.62
-    #define DEFAULT_Kd  78.81
+    #define DEFAULT_Kp  25.79
+    #define DEFAULT_Ki   2.22
+    #define DEFAULT_Kd  74.95
   #endif
 #endif // PIDTEMP
 
@@ -642,9 +642,9 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   // Ender 3 V2
-  #define DEFAULT_bedKp 462.10
-  #define DEFAULT_bedKi  85.47
-  #define DEFAULT_bedKd 624.59
+  #define DEFAULT_bedKp 104.48
+  #define DEFAULT_bedKi  19.00
+  #define DEFAULT_bedKd 383.02
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -927,7 +927,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 393.7 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1179,7 +1179,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -7, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -43.9, -12.4, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1331,7 +1331,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1861,8 +1861,8 @@
 #define PREHEAT_1_FAN_SPEED   255 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PLA"
-#define PREHEAT_2_TEMP_HOTEND 190
-#define PREHEAT_2_TEMP_BED     55
+#define PREHEAT_2_TEMP_HOTEND 205
+#define PREHEAT_2_TEMP_BED     60
 #define PREHEAT_2_FAN_SPEED   255 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "ABS"
